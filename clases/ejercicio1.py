@@ -22,8 +22,9 @@ def main1():
 
     #Ahora reemplazamos los valores de la condicion inicial en nuestra ecuacion   
 
-    C_eq = sympy.Eq(solucion.lhs.subs(x, 0).subs(ics), solucion.rhs.subs(x, 0))
+    C_eq = sympy.Eq(solucion.lhs.subs(x, 3).subs(ics), solucion.rhs.subs(x, 3))
 
+    solucion_eq=sympy.solve(C_eq)
 
     print('=============================')
     print('        ENUNCIADO')
@@ -34,6 +35,11 @@ def main1():
     print('         SOLUCION')
     print('=============================\n\n') 
     pprint(solucion)
+    print('\n\n')
+    print('=============================')
+    print(' SOLUCION CON VALOR INICIAL')
+    print('=============================\n\n') 
+    pprint(solucion_eq)
     print('\n\n')
 
 if __name__=='__main__':
