@@ -11,22 +11,29 @@ def main1():
     y = sympy.Function('y')
 
     # expreso la ecuacion
-    f = 6*x**2 - 3*x**2*(y(x))
-    sympy.Eq(y(x).diff(x), f)
+    f =  ((x**2)*y(x)-y(x))/(y(x)-1)
+    enunciado=sympy.Eq(y(x).diff(x), f)
 
+    #expreso la condicion inicial
+    ics = {y(3): -1}
+    
     # Resolviendo la ecuación
-    sympy.dsolve(y(x).diff(x) - f)
+    solucion=sympy.dsolve(y(x).diff(x) - f)
+
+    #Ahora reemplazamos los valores de la condicion inicial en nuestra ecuacion   
+
+    C_eq = sympy.Eq(solucion.lhs.subs(x, 0).subs(ics), solucion.rhs.subs(x, 0))
 
 
     print('=============================')
     print('        ENUNCIADO')
     print('=============================\n\n') 
-    pprint(sympy.Eq(y(x).diff(x), f))
+    pprint(enunciado)
     print('\n\n')
     print('=============================')
     print('         SOLUCION')
     print('=============================\n\n') 
-    pprint(sympy.dsolve(y(x).diff(x) - f))
+    pprint(solucion)
     print('\n\n')
 
 if __name__=='__main__':
