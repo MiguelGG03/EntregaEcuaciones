@@ -28,4 +28,4 @@ def main():
             sigue=False
             print('\n\nApagando...')
         else:
-            Exception('La respuesta debe ser una S o una N')
+            return Exception('La respuesta debe ser una S o una N')
