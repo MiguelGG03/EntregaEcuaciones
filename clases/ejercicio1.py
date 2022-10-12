@@ -1,4 +1,8 @@
+from sympy import *
 import sympy
+import math
+import numpy as np
+import matplotlib as plt
 
 def main1():
     # Resolviendo ecuación diferencial
@@ -13,5 +17,19 @@ def main1():
     # Resolviendo la ecuación
     sympy.dsolve(y(x).diff(x) - f)
 
+
+    print('=============================')
+    print('        ENUNCIADO')
+    print('=============================\n\n') 
+    pprint(sympy.Eq(y(x).diff(x), f))
+    print('\n\n')
+    print('=============================')
+    print('         SOLUCION')
+    print('=============================\n\n') 
+    pprint(sympy.dsolve(y(x).diff(x) - f))
+    print('\n\n')
+
 if __name__=='__main__':
+    
     main1()
+    
