@@ -14,28 +14,23 @@ def lin():
 
 def main2():
     x=symbols('x')
-    y=Function('y')
+    y=Function('y')('x')
 
-    ecuacion=Eq(diff(y,x)*sin(x),y*ln(y))
-    ecuacion1=diff(y,x)*sin(x)-y*ln(y)
-
-    solucion=dsolve(ecuacion1,y(x))
-
-    ci={y(pi/2):math.e()}
-
-    
-    
+    ecuacion1=Eq(diff(y,x),((((x)**2)*y)-y)/(y+1))
+    ecuacion=diff(y,x)-((((x)**2)*y)-y)/(y+1)
+    solucion=dsolve(ecuacion)
     
 
     print('============ ENUNCIADO =============')
     lin()
-    pprint(ecuacion)
+    pprint(ecuacion1)
     lin()
     print('============ SOLUCION =============')
     lin()
     pprint(solucion)
     lin()
     print('=================================')
+    print('\nNo he logrado pasarle el \nparametro inicial\ny(3)=-1')
     
 
 

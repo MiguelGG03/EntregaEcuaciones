@@ -14,19 +14,21 @@ def main1():
     x=symbols('x')
     y=Function('y')('x')
 
+    ecuacion1=Eq(diff(y,x),((((x)**2)*y)-y)/(y+1))
     ecuacion=diff(y,x)-((((x)**2)*y)-y)/(y+1)
     solucion=dsolve(ecuacion)
     
 
     print('============ ENUNCIADO =============')
     lin()
-    pprint(ecuacion)
+    pprint(ecuacion1)
     lin()
     print('============ SOLUCION =============')
     lin()
     pprint(solucion)
     lin()
     print('=================================')
+    print('\nNo he logrado pasarle el \nparametro inicial\ny(3)=-1')
     
 
 
