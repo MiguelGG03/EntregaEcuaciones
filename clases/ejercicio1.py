@@ -11,10 +11,10 @@ def lin():
   print('\n') # imprime línea vacía
 
 def main1():
-    t=symbols('t')
-    y=Function('y')('t')
+    x=symbols('x')
+    y=Function('y')('x')
 
-    ecuacion=2*t*diff(y,t)-y-3*(t)**2
+    ecuacion=diff(y,x)-((((x)**2)*y)-y)/(y+1)
     solucion=dsolve(ecuacion)
     
 
