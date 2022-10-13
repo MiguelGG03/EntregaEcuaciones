@@ -1,8 +1,11 @@
 from sympy import *
 import sympy
-import math
+from scipy import integrate
 import numpy as np
-import matplotlib as plt
+import matplotlib.pyplot as plt
+
+#que imprima utilizando notacion matematica
+sympy.init_printing(use_latex='mathjax')
 
 def main1():
     # Resolviendo ecuación diferencial
@@ -22,9 +25,9 @@ def main1():
 
     #Ahora reemplazamos los valores de la condicion inicial en nuestra ecuacion   
 
-    #C_eq = sympy.Eq(solucion.lhs.subs(x, 3).subs(ics), solucion.rhs.subs(x, 3))
+    C_eq = sympy.Eq(solucion.lhs.subs(x, 3).subs(ics), solucion.rhs.subs(x, 3))
 
-    #solucion_eq=sympy.solve(C_eq)
+    solucion_eq=sympy.solve(C_eq)
 
     print('=============================')
     print('        ENUNCIADO')
