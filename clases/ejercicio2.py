@@ -30,7 +30,7 @@ def main2():
     pprint(solucion)
     lin()
     print('=================================')
-    print('\nNo he logrado pasarle el \nparametro inicial\ny(3)=-1')
+    print('\nNo he logrado pasarle el \nparametro inicial\ny(pi/2)=e')
     
 
 
