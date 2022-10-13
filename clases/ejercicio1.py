@@ -1,11 +1,10 @@
-from sympy import *
+
+import matplotlib.pyplot as plt
+import numpy as np
 import sympy
 from scipy import integrate
-import numpy as np
-import matplotlib.pyplot as plt
+from sympy import *
 
-#que imprima utilizando notacion matematica
-sympy.init_printing(use_latex='mathjax')
 
 def main1():
     # Resolviendo ecuación diferencial
