@@ -1,4 +1,6 @@
 # IMPORTAR TODAS LAS FUNCIONES DE LA LIBRERÍA SYMPY
+import math
+
 from sympy import *
 # Visualización de resultados en forma de ecuación:
 # Utilizará Látex para la escritura de fórmulas, si no se tiene látex, por defecto se usa MathJax
@@ -12,10 +14,17 @@ def lin():
 
 def main2():
     x=symbols('x')
-    y=Function('y')('x')
+    y=Function('y')
 
-    ecuacion=diff(y,x)*sin(x)-y*ln(y)
-    solucion=dsolve(ecuacion)
+    ecuacion=Eq(diff(y,x)*sin(x),y*ln(y))
+    ecuacion1=diff(y,x)*sin(x)-y*ln(y)
+
+    solucion=dsolve(ecuacion1,y(x))
+
+    ci={y(pi/2):math.e()}
+
+    
+    
     
 
     print('============ ENUNCIADO =============')
