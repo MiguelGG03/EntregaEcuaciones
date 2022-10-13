@@ -10,7 +10,7 @@ printing.init_printing(use_latex=True)
 def lin():
   print('\n') # imprime línea vacía
 
-def main4():
+def main1():
     t=symbols('t')
     y=Function('y')('t')
 
@@ -31,4 +31,4 @@ def main4():
 
 
 if __name__=='__main__':
-    main4()
+    main1()
