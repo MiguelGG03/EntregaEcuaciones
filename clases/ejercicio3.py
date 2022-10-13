@@ -15,13 +15,14 @@ def main3():
     t=symbols('t')
     y=Function('y')('t')
 
+    ecuacion1=Eq(diff(y,t)-(y/(t-2)),2*(t-2)**2)
     ecuacion=diff(y,t)-(y/(t-2))-2*(t-2)**2
     solucion=dsolve(ecuacion)
     
 
     print('============ ENUNCIADO =============')
     lin()
-    pprint(ecuacion)
+    pprint(ecuacion1)
     lin()
     print('============ SOLUCION =============')
     lin()
