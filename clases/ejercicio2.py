@@ -16,8 +16,8 @@ def main2():
     x=symbols('x')
     y=Function('y')('x')
 
-    ecuacion1=Eq(diff(y,x),((((x)**2)*y)-y)/(y+1))
-    ecuacion=diff(y,x)-((((x)**2)*y)-y)/(y+1)
+    ecuacion1=Eq(diff(y,x)*sin(x),y*ln(y))
+    ecuacion=diff(y,x)*sin(x)-y*ln(y)
     solucion=dsolve(ecuacion)
     
 
